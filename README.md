@@ -6,6 +6,12 @@ node, login, API key, hosted database, subscription or company endpoint is neede
 
 ## Run locally
 
+**[Open the static browser app](https://researchforumonline.github.io/ZMath/)**
+or **[download the independent release](https://github.com/ResearchForumOnline/ZMath/releases/tag/v1.0.0)**.
+GitHub Pages delivers public static assets; your selected files and recovery
+factors are processed locally in the browser. Self-host the same files using
+the instructions below to control delivery as well.
+
 Install Python 3, then run in this directory:
 
 ```sh
