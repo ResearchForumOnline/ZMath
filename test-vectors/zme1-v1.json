@@ -1,0 +1,32 @@
+{
+  "schema": "zshield.test-vector.v1",
+  "passphrase": "ZShield-Test-Vector-2026",
+  "patternBase64": "enNoaWVsZC1rbm93bi1wYXR0ZXJuLXYx",
+  "plaintextBase64": "Q2FsbENoYXQgWk1FMSBwdWJsaWMga25vd24tYW5zd2VyIHZlY3RvciB2MS4K",
+  "container": {
+    "header": {
+      "format": "ZME1",
+      "version": 1,
+      "profile": "ZSHIELD-PBKDF2-AESGCM-1",
+      "payload": {
+        "name": "known-answer.txt",
+        "type": "text/plain",
+        "size": 45,
+        "kind": "file"
+      },
+      "createdAt": "2026-07-10T00:00:00Z",
+      "kdf": {
+        "name": "PBKDF2-SHA-256",
+        "iterations": 600000,
+        "salt": "6+YLYvgR+5I0XhYw112pGw==",
+        "patternRequired": true
+      },
+      "cipher": {
+        "name": "AES-256-GCM",
+        "iv": "IQYPx6E1jRz9Uk9g",
+        "tagLength": 128
+      }
+    },
+    "ciphertext": "DVfbF9I8u4y+fy47/+9FcG0E6aS/8VpEkBcAjm6TICRAGaecWv7Ev0jKwKSUybHbG/R8aCr5huI3LvtuNQ=="
+  }
+}

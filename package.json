@@ -1,0 +1,10 @@
+{
+  "name": "zmath-local-preservation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "scripts": {
+    "test": "node zshield-core.test.mjs && node qpu-factor-core.test.mjs && node preservation.test.mjs"
+  }
+}

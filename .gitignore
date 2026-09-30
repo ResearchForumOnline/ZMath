@@ -1,0 +1,12 @@
+dist/
+__pycache__/
+.env
+.env.*
+node_modules/
+*.log
+*.pem
+*.key
+*.db
+*.sqlite*
+*.zip
+*.sha256

@@ -1,0 +1,2 @@
+# Preserve exact source and archive bytes so published provenance hashes survive checkout.
+* -text

@@ -1,0 +1,78 @@
+{
+  "date": "2026-09-30",
+  "status": "passed",
+  "command": "npm test",
+  "node_version_requirement": ">=22",
+  "checks": [
+    "unchanged core and known-answer compatibility",
+    "file/message round trips, wrong keys, tamper and bounds",
+    "external factor derivation/parser/evidence structure and simulator boundary",
+    "local UI file/message actions and failed authentication",
+    "no network or persistent storage APIs in app/core/parser",
+    "all root HTML links and source assets exist",
+    "17 static archive pages: no scripts/forms/executable attributes; relative links and output hashes verified",
+    "real Brave browser message encryption/decryption and clear action, synthetic data only"
+  ],
+  "limitations": [
+    "DOM fixture tests and a desktop Brave message smoke check do not constitute full browser compatibility or independent accessibility review",
+    "no independent cryptographic audit or provider/hardware attestation"
+  ],
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "af0483948385ea53922c3b8f44a632e0e7a0caab6d8b04fe41595af62911808d"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "8442be8b48a5a69f1bcd0045c957806c0c95ff70340b27a88bedc811b65bc562"
+    },
+    {
+      "path": "app.js",
+      "sha256": "9ccc860578136378f6db66bc08951f011ae6c87222facc8ed61c148fb1926abf"
+    },
+    {
+      "path": "zshield-core.js",
+      "sha256": "c48b5af56a50a2c75f682d56843fdc9a82da7714cda1ddee602c5620fa5df8d6"
+    },
+    {
+      "path": "qpu-factor-core.js",
+      "sha256": "336b3fde202ae4a62087e889636ac4d8d7383e0510c2bbb46e139e86599e7787"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ec3811166eaf0f2d55f63b627b39ee650390bac0fc6f147f6a9cc13c55248fb9"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "75f5f2ae732cdc31adf8ad90a42ed4ed47476b3f27fcdf90de13e79d6788309d"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "65211a33431878734459021d71f33a8b22d332f2a6762f6494b44b58544f6601"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "3731196c7f726b22f9f7105fdd679ec2af87c83e9f3dcf29ab243ec8be9f8c3e"
+    },
+    {
+      "path": "preservation.test.mjs",
+      "sha256": "8b3f9c7de11e96551429193bede66435fd087a4036ab2f0014d18a7765373dd2"
+    },
+    {
+      "path": "zshield-core.test.mjs",
+      "sha256": "d184a415cf92d855c481f318f604b861ecbc7d9bba6a76b5414c08a5ad5bd283"
+    },
+    {
+      "path": "qpu-factor-core.test.mjs",
+      "sha256": "0d35a373a2e68ec29b0a5bb3f56d90bb9c0dd53ae9e3ad63c54d8ef05f69f120"
+    },
+    {
+      "path": "test-vectors/zme1-v1.json",
+      "sha256": "ed6a174f387bbc63b82f7b2c2e2c4623a88a481afef28bac4a36b83791173a52"
+    },
+    {
+      "path": "package.json",
+      "sha256": "065c30adda953b08df44f1bd0b881000329b5cb6d10a50bcdfa4c2cdc10ef437"
+    }
+  ]
+}

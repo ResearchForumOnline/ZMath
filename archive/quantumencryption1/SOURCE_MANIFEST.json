@@ -1,0 +1,120 @@
+{
+  "schema": "zmath.public-site-preservation.v1",
+  "date": "2026-09-30",
+  "transforms": [
+    "PHP response headers removed",
+    "forms and scripts removed",
+    "relative archive links",
+    "historical status banner"
+  ],
+  "files": [
+    {
+      "source": "index.php",
+      "source_sha256": "83a50eec18499fa40207a0d8c1222bb0f6005b81a06387b7dddd636e6dfe15f2",
+      "archive": "archive/quantumencryption1/index.html",
+      "archive_sha256": "acce9dc81c6dc5daafd2e5684ad0a07b14264ee81fde8d6bfea7ca9f665af304"
+    },
+    {
+      "source": "technology/index.php",
+      "source_sha256": "6eb5eec4d3d8f1c0d4e5a70755d46b4c14bbfd664ea27b94d6b95c4337e2f8bd",
+      "archive": "archive/quantumencryption1/technology/index.html",
+      "archive_sha256": "1f271a256f12803381d21cc70d49b026d5bc0c77c26c6e4e1ba0908979cfd5ad"
+    },
+    {
+      "source": "zero-boundary-algebra/index.php",
+      "source_sha256": "7002dc804da8a97bf48f7808c54da2045ead9b5bdd4ec120dcf93188e9dbb491",
+      "archive": "archive/quantumencryption1/zero-boundary-algebra/index.html",
+      "archive_sha256": "cf5a55a3b7609a5e73c6ccb268161e0f902281b9f042af0ed6f00ba4d3b186cb"
+    },
+    {
+      "source": "zmath-file-encryption/index.php",
+      "source_sha256": "ef3975fe6471341cb28fdd70e46d19e599b5884a00892da348875fabb4bf549b",
+      "archive": "archive/quantumencryption1/zmath-file-encryption/index.html",
+      "archive_sha256": "a2f330a31354b1e3260c087b1f14df91ca102377e8580077882cc2ccda0e806b"
+    },
+    {
+      "source": "security-model/index.php",
+      "source_sha256": "50a8632e6cfa1ebf45595621a40b3d6eabd78714c50e04391d01c4d3c1cc66ed",
+      "archive": "archive/quantumencryption1/security-model/index.html",
+      "archive_sha256": "dc396e652c109edc1fadf55d5f979f318bb7cd0de4c5baa5f35764792c3f2847"
+    },
+    {
+      "source": "quantum-encrypted-files/index.php",
+      "source_sha256": "644b36cba9dd197c757a2c10446cc3690c8854ef577cb8335d7fc715bb322475",
+      "archive": "archive/quantumencryption1/quantum-encrypted-files/index.html",
+      "archive_sha256": "0d89590cb6f7bb83bf2065331cef9f000a768f82ebfe2e4cab262f900bb53598"
+    },
+    {
+      "source": "ionq-quantum-api-integration/index.php",
+      "source_sha256": "2edda8b2bcf436372b8cc7eea2d13233d294d682d223cc3e399592acaf0343b1",
+      "archive": "archive/quantumencryption1/ionq-quantum-api-integration/index.html",
+      "archive_sha256": "47583294a80a4e51e8bdebf4b7877901bdc0106ffe4025fb78d355fb98613328"
+    },
+    {
+      "source": "post-quantum-cryptography-uk/index.php",
+      "source_sha256": "bcfecee31776c0e73812e4d0ae30725062d520def7207d7e855a8b81cbd9ca66",
+      "archive": "archive/quantumencryption1/post-quantum-cryptography-uk/index.html",
+      "archive_sha256": "871a3f1706417bcb5536e21ddd7dafac896e6fbecf196438243fa66a4004d7cb"
+    },
+    {
+      "source": "government-defence/index.php",
+      "source_sha256": "80e24764ef1a6aefe5664df0589abceb783e8af81796b5df0e0a7c80c6519f6d",
+      "archive": "archive/quantumencryption1/government-defence/index.html",
+      "archive_sha256": "1fea73cd2a917d92207e5e65769a4c4b9e3c897bab0a5cb277345fc75d8e5081"
+    },
+    {
+      "source": "operational-hardware/index.php",
+      "source_sha256": "eaf41f12625a9bf721cd5eae7a88bdffabd4543296f28e5eafc90a2f8a6a5c8f",
+      "archive": "archive/quantumencryption1/operational-hardware/index.html",
+      "archive_sha256": "4b1fcfb0a19e6eb4470feab02ec383cec6d7fc51b019c8c69cc966094761047b"
+    },
+    {
+      "source": "uk-defence-brief/index.php",
+      "source_sha256": "54caf1ad24a63c462861c573ff89d5e0f6c9603f25ded8191602208faa9ee667",
+      "archive": "archive/quantumencryption1/uk-defence-brief/index.html",
+      "archive_sha256": "a2d2e4b8b3686c41fb821ff55b8998ffd608c48ab088405f57647e9f82ada8dd"
+    },
+    {
+      "source": "uk-mod-access-policy/index.php",
+      "source_sha256": "546a231ea88e100f567a0e66eb3110ba80bfccbde3b92635e99d22308dd6569a",
+      "archive": "archive/quantumencryption1/uk-mod-access-policy/index.html",
+      "archive_sha256": "33045713a1ca506c1c477b6d48b0cecf3782be15393a0b3e3b32ea000fee5a7c"
+    },
+    {
+      "source": "privacy/index.php",
+      "source_sha256": "2fabd76b8928fd33aa9849b7c28421910e0ba3a146e75cbddf5be4dd7a6a6e84",
+      "archive": "archive/quantumencryption1/privacy/index.html",
+      "archive_sha256": "6406d4f0eba42d9f6edd869d57c51eb4773901c5aa0bb887975a972d2992bccd"
+    },
+    {
+      "source": "terms/index.php",
+      "source_sha256": "fe91ca39299feb66acf520e3afdc5813826ce90e0b3ad98fa01c90e3145ace5e",
+      "archive": "archive/quantumencryption1/terms/index.html",
+      "archive_sha256": "a264399ee784db9bc914e4a79bc2d379a17542aec4af72751dca03c22f9a944f"
+    },
+    {
+      "source": "pricing/index.php",
+      "source_sha256": "f85d131ef35160190d38f65c323af273e3a8859894c5ad8ec5aa332a8750406a",
+      "archive": "archive/quantumencryption1/pricing/index.html",
+      "archive_sha256": "a12bb7c641bc3267b175b9c484a67f132f0b3e0bbfa2a102efd32bae415cb1c2"
+    },
+    {
+      "source": "contact/index.php",
+      "source_sha256": "0b64cfd01c03f2722ab0d0a6ed8363f059cbfc12e7334c3eb5ac893fdcd98707",
+      "archive": "archive/quantumencryption1/contact/index.html",
+      "archive_sha256": "0cfc93cf0a62d09196a331966aea3deecbe4acfbbf25bbf932c263edb152ca44"
+    },
+    {
+      "source": "quantum-seal-test/index.php",
+      "source_sha256": "58608df32f9de5c9d525b4bca2aeaf483a5d07243d6395cf457d56eb51fc4b15",
+      "archive": "archive/quantumencryption1/quantum-seal-test/index.html",
+      "archive_sha256": "99a1e7fd4e71a5a68abd33d4ad045bc50db9631b4178860922502a7e6ee60a6f"
+    },
+    {
+      "source": "assets/css/site.css",
+      "source_sha256": "6985788e0c99bc0783a171c2f0473b9663353ffb57e156b404f962e8c41b94c9",
+      "archive": "archive/quantumencryption1/assets/site.css",
+      "archive_sha256": "f0870120fe78dd744f766cac027f4870b03746e7dde4b16bb11fe07d1cd5a033"
+    }
+  ]
+}

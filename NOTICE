@@ -1,0 +1,13 @@
+Required Notice: Copyright 2026 Shafaet Brady Hussain
+
+This release of the reviewed user-owned ZMath application and preserved source
+snapshots is licensed under PolyForm Noncommercial License 1.0.0. The full
+license is supplied in LICENSE. Commercial uses are not granted by this license.
+
+Existing CC BY 4.0 research papers and any previously distributed third-party
+or separately licensed software retain their own terms. This release does not
+revoke earlier licenses or claim ownership of third-party standards or code.
+
+Preserved compatibility strings include CallChat, Matrix, QPU and IonQ labels.
+They identify old formats, not active services, hardware attestation, or security
+properties established by this standalone application.

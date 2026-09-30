@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>ZMath Local — protect files and messages</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><a class="brand" href="./">Z<span>Math</span></a><span class="local">● All processing stays in this browser</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">INDEPENDENT • SELF HOSTED • NO ACCOUNT</p><h1>Your files.<br>Your keys. Your control.</h1><p>Protect a file or message using conventional authenticated encryption. No main node, subscription, API key or company server is needed.</p></section>
+    <section class="workspace" aria-label="Local encryption workspace">
+      <section class="factors">
+        <h2>1. Set your recovery factors</h2>
+        <p>Keep the passphrase and any factor files safely. There is no password reset.</p>
+        <label for="passphrase">Passphrase — at least 14 characters</label>
+        <div class="row"><input id="passphrase" type="password" autocomplete="off" minlength="14"><button id="generate" type="button">Generate</button></div>
+        <label class="check"><input id="showPassphrase" type="checkbox"> Show passphrase</label>
+        <label for="pattern">Optional pattern or key file</label><input id="pattern" type="file">
+        <p class="hint">If selected during encryption, the exact same file is required to decrypt.</p>
+        <details><summary>Advanced: optional external factor</summary><p>This is an additional local secret input, not quantum encryption or verified hardware evidence. An existing ZQF1 factor file can be imported for compatibility. Its self-reported source is not attestation.</p><label for="external">External factor file (maximum 1 MiB)</label><input id="external" type="file"><label class="check"><input id="structuredFactor" type="checkbox"> This file is a legacy ZQF1 JSON factor</label></details>
+      </section>
+      <section class="actions">
+        <h2>2. Choose an operation</h2>
+        <nav class="tabs" aria-label="Content type"><button id="fileTab" type="button" aria-pressed="true">Files</button><button id="messageTab" type="button" aria-pressed="false">Messages</button></nav>
+        <div id="files"><label for="payload">File or ZME1 container</label><input id="payload" type="file"><p class="hint">Plaintext limit: 50 MiB. JSON container limit: 72 MiB. Older server-bound Portable/Exclusive envelopes use a different format and are not opened here.</p><div class="row"><button id="encryptFile" class="primary" type="button">Encrypt file</button><button id="decryptFile" type="button">Decrypt container</button></div></div>
+        <div id="messages" hidden><label for="message">Message or ZSHIELD1 envelope</label><textarea id="message" rows="7" spellcheck="false"></textarea><p class="hint">Message limit: 12 KiB. Envelopes preserve the original compatibility identifier.</p><div class="row"><button id="encryptMessage" class="primary" type="button">Encrypt message</button><button id="decryptMessage" type="button">Decrypt message</button></div><label for="messageOutput">Result</label><textarea id="messageOutput" rows="6" readonly spellcheck="false"></textarea><button id="downloadMessage" type="button">Download result</button></div>
+        <div id="status" role="status" aria-live="polite">Ready. Save your recovery factors before encrypting.</div>
+        <button id="clear" type="button" class="quiet">Clear inputs and results</button>
+      </section>
+    </section>
+    <section class="explain"><article><h3>Standard primitives</h3><p>AES-256-GCM, PBKDF2-HMAC-SHA-256 and HKDF-SHA-256. The preserved implementation authenticates its canonical header and rejects a wrong key or altered container.</p></article><article><h3>Visible metadata</h3><p>The filename, size, timestamp, algorithms and optional factor commitment remain visible. The encrypted content stays confidential only while your keys and device remain secure.</p></article><article><h3>Preserved and reviewable</h3><p>The cryptographic snapshot is unchanged from the source evaluated in the August 2026 ZME1 paper. This is research software; regression checks are not an independent security audit.</p></article></section>
+    <footer><span>© 2026 Shafaet Brady Hussain</span><a href="README.md">Documentation</a><a href="archive/quantumencryption1/index.html">Research website archive</a><a href="LICENSE">Noncommercial licence</a><a href="PROVENANCE.json">Source provenance</a></footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
