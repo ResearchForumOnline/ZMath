@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>ZMath Dual Key — local notes and file vault</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><a class="brand" href="../">Z<span>Math</span> / Dual Key</a><span class="local">● Browser only · no account or upload</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">PRESERVED RESEARCH • INDEPENDENT KEYS • TWO AUTHENTICATED LAYERS</p><h1>One private vault.<br>Two separate inputs.</h1><p>Protect notes and attachments with your passphrase, then wrap that encrypted layer with a visual-pattern key. Keep both inputs and the downloaded vault yourself.</p><p class="route"><a href="../">Files & messages</a><span> / </span><a href="README.md">Dual-key compatibility & research</a></p></section>
+    <aside class="boundary"><strong>A long unique passphrase provides the main strength.</strong><p>The 6–9-point pattern has fewer than one million possible sequences: under 20 bits before human choice reduces it. Two AES-256-GCM layers do not mean AES-512. This is reviewed research software, without independent cryptographic certification.</p></aside>
+    <section class="workspace" aria-label="Dual-key vault workspace">
+      <section class="factors">
+        <h2>1. Keep your two inputs</h2><p>No server can reset or recover either input. Use a password manager and keep the pattern separately.</p>
+        <label for="passphrase">Vault passphrase — 12–512 characters</label><div class="row"><input id="passphrase" type="password" minlength="12" maxlength="512" autocomplete="off"><button id="generate" type="button">Generate</button></div>
+        <label class="check"><input id="showPassphrase" type="checkbox"> Show passphrase</label>
+        <label for="confirm">Repeat passphrase when creating a vault</label><input id="confirm" type="password" minlength="12" maxlength="512" autocomplete="off">
+        <fieldset><legend>Visual pattern</legend><p class="hint">Choose 6–9 different squares in order. Click the last selected square to undo.</p><div class="pattern-grid" role="group" aria-label="Visual pattern">
+          <button type="button" data-point="1" aria-pressed="false" aria-label="Pattern point 1">1</button><button type="button" data-point="2" aria-pressed="false" aria-label="Pattern point 2">2</button><button type="button" data-point="3" aria-pressed="false" aria-label="Pattern point 3">3</button><button type="button" data-point="4" aria-pressed="false" aria-label="Pattern point 4">4</button><button type="button" data-point="5" aria-pressed="false" aria-label="Pattern point 5">5</button><button type="button" data-point="6" aria-pressed="false" aria-label="Pattern point 6">6</button><button type="button" data-point="7" aria-pressed="false" aria-label="Pattern point 7">7</button><button type="button" data-point="8" aria-pressed="false" aria-label="Pattern point 8">8</button><button type="button" data-point="9" aria-pressed="false" aria-label="Pattern point 9">9</button>
+        </div><p id="patternCount" class="hint" aria-live="polite">Choose at least 6 squares.</p><button id="clearPattern" type="button" class="quiet">Clear pattern</button></fieldset>
+      </section>
+      <section class="actions">
+        <h2>2. Protect or restore</h2><nav class="tabs" aria-label="Vault operation"><button id="lockTab" type="button" aria-pressed="true">Create a vault</button><button id="unlockTab" type="button" aria-pressed="false">Open a vault</button></nav>
+        <div id="lockPanel"><label for="title">Private label — optional</label><input id="title" maxlength="120" autocomplete="off"><label for="note">Private note — optional</label><textarea id="note" rows="7" maxlength="100000" spellcheck="false"></textarea><label for="attachment">Attachment — optional, up to 8 MiB</label><input id="attachment" type="file"><p class="hint">The label, note and attachment metadata are encrypted together. Add a note, a file, or both.</p><button id="encrypt" class="primary" type="button">Encrypt & download vault</button><label for="vaultOutput">Encrypted vault JSON</label><textarea id="vaultOutput" rows="4" readonly spellcheck="false" aria-describedby="vault-output-help"></textarea><p id="vault-output-help" class="hint">Save the downloaded .zmath file. This copy contains ciphertext, not your note or inputs.</p><button id="downloadVault" type="button" disabled>Download vault again</button></div>
+        <div id="unlockPanel" hidden><label for="vaultFile">Choose an existing .zmath vault</label><input id="vaultFile" type="file" accept=".zmath,application/json"><label for="vaultInput">Or paste encrypted vault JSON</label><textarea id="vaultInput" rows="7" spellcheck="false"></textarea><p class="hint">Maximum vault size: 20 MiB. A selected file takes priority over pasted JSON. This opens Shield .zmath v1 files, not ZME1 or .ztz formats.</p><button id="decrypt" class="primary" type="button">Open both layers locally</button><article id="result" hidden><h3 id="resultTitle"></h3><p id="resultMeta" class="hint"></p><pre id="resultNote"></pre><button id="downloadAttachment" type="button" hidden>Download restored attachment</button><button id="clearResult" type="button" class="quiet">Clear decrypted result</button></article></div>
+        <div id="status" role="status" aria-live="polite">Ready. Save your inputs before creating a vault.</div><div class="row"><button id="selfTest" type="button">Run local self-test</button><button id="clear" type="button" class="quiet">Clear all inputs & results</button></div>
+      </section>
+    </section>
+    <section class="explain"><article><h3>Separate derivations</h3><p>Each layer uses its own random 32-byte salt, PBKDF2-HMAC-SHA-256 at 600,000 iterations, a non-exportable AES-256-GCM key and random 12-byte IV.</p></article><article><h3>Portable recovery</h3><p>The .zmath file has everything needed except your two inputs. Timestamp and algorithm metadata remain visible; the label, note and original filename are encrypted.</p></article><article><h3>Local source custody</h3><p>The original Shield module and six tests are preserved byte-for-byte. The new interface has no remote API, tracking, browser key store or login.</p></article></section>
+    <footer><span>© 2026 Shafaet Brady Hussain</span><a href="../">ZMath Local</a><a href="README.md">Compatibility guide</a><a href="../preserved/protected-mail/README.md">Signed-envelope research</a><a href="../LICENSE">Noncommercial licence</a></footer>
+  </main><script type="module" src="app.js"></script>
+</body>
+</html>

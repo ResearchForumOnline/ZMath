@@ -1,9 +1,9 @@
 {
-  "release": "ZMath Local preservation 1.0.0",
+  "release": "ZMath Local preservation 1.1.0",
   "prepared_date": "2026-09-30",
   "author": "Shafaet Brady Hussain",
-  "snapshot_source": "callchat/web/public/shield/app",
-  "snapshot_policy": "Only these five reviewed public-web files were copied. No server, credential, database, user-data or deployment files are included.",
+  "snapshot_source": "Reviewed CallChat ZME1 and Zmail Shield/protected-message public-web modules",
+  "snapshot_policy": "Only the listed reviewed public-web source/test snapshots were copied. No private factors, server, credential, database, user-data or deployment files are included. New local interfaces and portable tests are separately authored.",
   "source_files": [
     {
       "path": "zshield-core.js",
@@ -34,9 +34,43 @@
       "sha256": "ed6a174f387bbc63b82f7b2c2e2c4623a88a481afef28bac4a36b83791173a52",
       "bytes": 923,
       "unchanged": true
+    },
+    {
+      "path": "dual-key/site/assets/zmath-shield.js",
+      "source_path": "zmail-platform/site/assets/zmath-shield.js",
+      "sha256": "f12953ded126c9991f4137b64f1aa609fc2391942960b4d7d8a3c7f0ed7d3fc8",
+      "bytes": 24080,
+      "unchanged": true
+    },
+    {
+      "path": "dual-key/test/zmath-shield.test.mjs",
+      "source_path": "zmail-platform/test/zmath-shield.test.mjs",
+      "sha256": "744c1896128fc8d76523032fb20990b43025722e7d8bbda2d02cd1c4d0110560",
+      "bytes": 4321,
+      "unchanged": true
+    },
+    {
+      "path": "preserved/protected-mail/zmath-mail-crypto.js",
+      "source_path": "zmail-platform/ops/roundcube-zmath-mail/zmath-mail-crypto.js",
+      "sha256": "01c6442ac4080a64a8641ea657cac872f43514c1a9822b11b5ba1eb7287de7d9",
+      "bytes": 12958,
+      "unchanged": true
+    },
+    {
+      "path": "preserved/protected-mail/original-tests/zmath-mail-crypto.test.mjs",
+      "source_path": "zmail-platform/test/zmath-mail-crypto.test.mjs",
+      "sha256": "f0039be7b67da0a52f3a1e48aa161c57f1fdf2a6dd009e05f286e39da1f9bb19",
+      "bytes": 6066,
+      "unchanged": true
     }
   ],
   "license_text_source": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/PolyForm-Noncommercial-1.0.0.txt",
   "license_text_sha256": "75f5f2ae732cdc31adf8ad90a42ed4ed47476b3f27fcdf90de13e79d6788309d",
-  "research_paper_license": "Previously distributed CC BY 4.0 papers remain under their existing license; this release does not revoke their grants."
+  "research_paper_license": "Previously distributed CC BY 4.0 papers remain under their existing license; this release does not revoke their grants.",
+  "compatibility_notes": [
+    "ZME1, Shield .zmath and legacy .ztz/Portable/Exclusive are distinct formats, not interchangeable.",
+    "Retained historic names are format/domain strings, not website dependencies.",
+    "Older server-bound Exclusive containers require original server factors; no production factors were opened or copied.",
+    "Old zmath_restore custom .ztz and IndexedDB auto-shield implementations were inventoried but not installed as current production crypto."
+  ]
 }

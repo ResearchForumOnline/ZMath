@@ -1,10 +1,10 @@
 {
   "name": "zmath-local-preservation",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "license": "PolyForm-Noncommercial-1.0.0",
   "scripts": {
-    "test": "node zshield-core.test.mjs && node qpu-factor-core.test.mjs && node preservation.test.mjs"
+    "test": "node zshield-core.test.mjs && node qpu-factor-core.test.mjs && node preservation.test.mjs && node --test dual-key/test/zmath-shield.test.mjs dual-key/test/ui.test.mjs preserved/protected-mail/core.test.mjs"
   }
 }

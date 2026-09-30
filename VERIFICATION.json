@@ -1,30 +1,49 @@
 {
   "date": "2026-09-30",
+  "release": "1.1.0",
   "status": "passed",
   "command": "npm test",
   "node_version_requirement": ">=22",
+  "existing_test_programs_passed": 3,
+  "new_named_node_tests_passed": 17,
+  "new_named_node_tests_failed": 0,
   "checks": [
-    "unchanged core and known-answer compatibility",
-    "file/message round trips, wrong keys, tamper and bounds",
-    "external factor derivation/parser/evidence structure and simulator boundary",
-    "local UI file/message actions and failed authentication",
-    "no network or persistent storage APIs in app/core/parser",
-    "all root HTML links and source assets exist",
-    "17 static archive pages: no scripts/forms/executable attributes; relative links and output hashes verified",
-    "real Brave browser message encryption/decryption and clear action, synthetic data only"
+    "Exact original ZME1 core and known-answer compatibility",
+    "ZME1 file/message round trips, wrong keys, tamper and bounds",
+    "External factor contracts and evidence/simulator boundaries",
+    "Existing local UI file/message actions and failed authentication",
+    "Six unchanged original dual-layer vault regression cases",
+    "Four new dual-key source/link/UI/recovery/self-test cases",
+    "Seven portable signed-envelope source/hash/tamper/recipient cases",
+    "17 historical archive pages verified with safe local links and content hashes",
+    "Real Brave dual-key UI note encryption/decryption using synthetic content, wrong-passphrase rejection, clear and local self-test"
   ],
+  "browser_ui": {
+    "synthetic_only": true,
+    "browser": "Brave",
+    "source": "http://127.0.0.1:18732/dual-key/",
+    "date": "2026-09-30",
+    "verified": [
+      "encryption",
+      "pasted JSON decryption",
+      "wrong-input rejection",
+      "clear inputs/result",
+      "synthetic self-test"
+    ]
+  },
   "limitations": [
-    "DOM fixture tests and a desktop Brave message smoke check do not constitute full browser compatibility or independent accessibility review",
-    "no independent cryptographic audit or provider/hardware attestation"
+    "Author-controlled regression and one desktop browser smoke check are not independent cryptographic certification",
+    "No live mail/identity service or production protected-mail deployment is provided",
+    "No quantum attestation, post-quantum P-256 agreement, or multiplied AES key strength is claimed"
   ],
   "files": [
     {
       "path": "index.html",
-      "sha256": "af0483948385ea53922c3b8f44a632e0e7a0caab6d8b04fe41595af62911808d"
+      "sha256": "5efa68e556ea2294aedba9cec142a60c9971f08ed39ee646f19c476b57a9c5cf"
     },
     {
       "path": "styles.css",
-      "sha256": "8442be8b48a5a69f1bcd0045c957806c0c95ff70340b27a88bedc811b65bc562"
+      "sha256": "055a936a20914ea16c9c85fd7555518c59c6dc00b7067fbcaad6d693fb149c79"
     },
     {
       "path": "app.js",
@@ -40,7 +59,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "80f6b13cbf57237ed35e93724cd5532a8dbff7af0ba96ded3bc4e3e395028da9"
+      "sha256": "8037f5edd905576703c7a800d0451213df0d4b5e0c43938fb0be812a84e98c00"
     },
     {
       "path": "LICENSE",
@@ -52,7 +71,7 @@
     },
     {
       "path": "PROVENANCE.json",
-      "sha256": "3731196c7f726b22f9f7105fdd679ec2af87c83e9f3dcf29ab243ec8be9f8c3e"
+      "sha256": "5de7ac734ae0dbc35eed9a38561b18eebe444032ec8d0866b20cda46296beb9c"
     },
     {
       "path": "preservation.test.mjs",
@@ -72,7 +91,55 @@
     },
     {
       "path": "package.json",
-      "sha256": "065c30adda953b08df44f1bd0b881000329b5cb6d10a50bcdfa4c2cdc10ef437"
+      "sha256": "4c65bdadf050fd5290830b039fc94841cd16cefb5fe7d2e58a3305a6950b8c0e"
+    },
+    {
+      "path": "scripts/build_release.py",
+      "sha256": "387b03b0a9a3f708425504ac07013dc7570fab610930a7e1d0fb002c53909f3f"
+    },
+    {
+      "path": "dual-key/index.html",
+      "sha256": "9339cc613e5157c655ece36b42e19e0c71862fec59d38f3e802a52e5301d3233"
+    },
+    {
+      "path": "dual-key/styles.css",
+      "sha256": "e522eb34c54d9a62407cb53bd05ea9f9e64ea32447e165529f08344a9f34bcb4"
+    },
+    {
+      "path": "dual-key/app.js",
+      "sha256": "44fc1c090bfd2f94cb57b9334c51f8325605769502db08674d6aafeed0d9e484"
+    },
+    {
+      "path": "dual-key/README.md",
+      "sha256": "196af169acbb95d40436c967672b59b6171368291e34a6ef0d85e6c2e725c298"
+    },
+    {
+      "path": "dual-key/site/assets/zmath-shield.js",
+      "sha256": "f12953ded126c9991f4137b64f1aa609fc2391942960b4d7d8a3c7f0ed7d3fc8"
+    },
+    {
+      "path": "dual-key/test/zmath-shield.test.mjs",
+      "sha256": "744c1896128fc8d76523032fb20990b43025722e7d8bbda2d02cd1c4d0110560"
+    },
+    {
+      "path": "dual-key/test/ui.test.mjs",
+      "sha256": "7630f16a482f2b4e05c6e563f3d3da24a891060f55d7a63a9737530f821c10f5"
+    },
+    {
+      "path": "preserved/protected-mail/README.md",
+      "sha256": "f02ba28709bd6f098e6d0b4f3d227f5a6550921e540d9d9d09f8caf576018e43"
+    },
+    {
+      "path": "preserved/protected-mail/zmath-mail-crypto.js",
+      "sha256": "01c6442ac4080a64a8641ea657cac872f43514c1a9822b11b5ba1eb7287de7d9"
+    },
+    {
+      "path": "preserved/protected-mail/core.test.mjs",
+      "sha256": "bb1a2bf55c78ff04c7ca106e9364281472be29130a71060dde6c709dcaf6d3ed"
+    },
+    {
+      "path": "preserved/protected-mail/original-tests/zmath-mail-crypto.test.mjs",
+      "sha256": "f0039be7b67da0a52f3a1e48aa161c57f1fdf2a6dd009e05f286e39da1f9bb19"
     }
   ]
 }

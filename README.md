@@ -7,7 +7,7 @@ node, login, API key, hosted database, subscription or company endpoint is neede
 ## Run locally
 
 **[Open the static browser app](https://researchforumonline.github.io/ZMath/)**
-or **[download the independent release](https://github.com/ResearchForumOnline/ZMath/releases/tag/v1.0.0)**.
+or **[download the independent release](https://github.com/ResearchForumOnline/ZMath/releases/tag/v1.1.0)**.
 GitHub Pages delivers public static assets; your selected files and recovery
 factors are processed locally in the browser. Self-host the same files using
 the instructions below to control delivery as well.
@@ -27,6 +27,26 @@ secure context; double-clicking the HTML file is not the recommended route.
 The UI has no dependencies, remote fonts, analytics, persistent key store, or
 accounts. It uses in-memory inputs and local downloads. Clearing the page does
 not guarantee erasure of every browser or operating-system memory copy.
+
+## New in 1.1: Dual Key and signed-envelope preservation
+
+**[Open the standalone dual-key vault](https://researchforumonline.github.io/ZMath/dual-key/)**
+for private notes and attachments. It preserves the original `.zmath` Shield
+profile: passphrase encryption inside a separately derived visual-pattern layer.
+The original module and six-test suite are unchanged. A new local interface adds
+file/pasted-JSON recovery, generated passphrases, safe attachment downloads,
+visible progress, clear actions and a synthetic self-test.
+
+The grid has fewer than one million possible 6–9-point sequences, under 20 bits
+before user bias; a strong unique passphrase provides the main strength. Two
+AES-256-GCM layers do not mean AES-512. See the
+[dual-key format and compatibility guide](dual-key/README.md).
+
+The [preserved signed-envelope core](preserved/protected-mail/README.md) matches
+the hashes in the published protected-communications paper. It uses two random
+AES keys, P-256 ECDH/HKDF device wrapping and ECDSA signatures. This is reviewed
+historical/experimental source with portable synthetic tests, not a mail
+service, verified identity directory or post-quantum protocol.
 
 ## Protect and restore
 
@@ -76,6 +96,9 @@ byte-for-byte from the reviewed local public-web snapshot evaluated in the
 `c48b5af56a50a2c75f682d56843fdc9a82da7714cda1ddee602c5620fa5df8d6`.
 `PROVENANCE.json` records source-relative paths and exact hashes. These source
 snapshots are preserved, not claimed to be newly invented cryptographic primitives.
+The added Shield vault and signed-envelope snapshots are independently listed
+in that manifest; their formats are distinct from the current ZME1 file/message
+format. No original recovery factors or private production services are bundled.
 
 Run with Node.js 22 or later; no package installation is needed:
 
